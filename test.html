@@ -1,0 +1,26 @@
+<head>
+	<title>ErrORrrr... Loading... 0x3e8fce8b83174b2d</title>
+	<style>
+		@font-face {font-family: "nixie2";src: url("fonts/atwriter.ttf")format("truetype");}
+		h1 {font-family: 'nixie2'; color:#ffcc67;letter-spacing:2px;font-size:100px;text-align:center;}
+		body {background-color:#000000;} 
+	</style>
+
+	<script>
+	
+	window.onload = function start() {
+    		update();
+	}
+	function update() {
+	window.setInterval(function () {
+		var randomnumber=Math.floor(Math.random()*100000000)
+    		document.getElementById("numbers").innerHTML=randomnumber.toString(16);
+		var num = (num + 1);
+    	}, 1500); // repeat forever, polling every 3 seconds
+	}
+	</script>		
+		
+</head>
+<body>
+<br><br><br><br><div><h1 id="numbers">&lt;START&gt;</h1></div>
+</body>

@@ -1,0 +1,37 @@
+@font-face {
+    font-family: "nixie";
+    src: url("font/nixie.ttf")
+	format("truetype");
+}
+
+h1 {
+  font-family: 'nixie';
+  z-index:1;
+
+}
+
+#text{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+	z-index:1;
+}
+
+body {background-color:#b0c4de;} 
+
+#container{  
+	position: fixed;  
+	height: 100%;   
+	width: 100%;   
+	top: 0;   
+	left: 0;  
+	z-index: -1;    
+}  

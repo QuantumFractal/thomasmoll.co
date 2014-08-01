@@ -1,0 +1,53 @@
+<head>
+	<title>ErrORrrr... Loading... 0x3e8fce8b83174b2d</title>
+	<style>
+		@font-face {font-family: "nixie2";src: url("fonts/atwriter.ttf")format("truetype");}
+		h1 {font-family: 'nixie2'; color:#ffcc67;letter-spacing:2px;font-size:100px;text-align:center;}
+		body {background-color:#000000;} 
+	</style>
+
+	<script>
+	myAudio = new Audio('sound/creepy.mp3'); 
+	myAudio.addEventListener('ended', function() {
+    		this.currentTime = 0;
+    		this.play();
+	}, false);
+	myAudio.play();	
+	window.onload = function start() {
+    		update();
+	}
+	function update() {
+	var randomnumber=100; //Math.floor(Math.random()*1000)
+	window.setInterval(function () {
+    		if (randomnumber < 0){
+			document.body.style.background= "#FF0000";
+			document.getElementById("numbers").innerHTML="&#123;END&#125;"
+		}
+		else{
+			document.getElementById("numbers").innerHTML="0x"+randomnumber.toString(16);
+		}		
+		if(randomnumber%2 === 0){
+		}
+		else{
+			document.body.style.background= "#000000";
+		}
+		randomnumber = Math.floor(Math.random()*1000);//randomnumber - 1;
+    	}, 500); // repeat forever, polling every 3 seconds
+	}
+	</script>		
+		
+</head>
+<body>
+ 
+<div style="position:fixed; z-index:10000; left:0; top:0; right:0; bottom:0;">
+<br><br><br><br><br><br><br><h1 id="numbers">&#123;START&#125;</h1>
+</div>
+
+<div id="container">  
+	<video width="100%" autoplay loop poster="/images/creepy.png">    
+		<source src="video/creepy.webm" type="video/webm" />    
+	</video>   
+</div>
+
+
+</body>
